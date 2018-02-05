@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#go get github.com/lib/pq
 rm -rf bin/
 mkdir bin/
 cp -r app/templates bin/

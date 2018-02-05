@@ -13,6 +13,8 @@ services:
       POSTGRES_PASSWORD: dictcard
       POSTGRES_DB: dictcard
       PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+      - "6000:5432"
     volumes:
       - "./pgdata/:/var/lib/postgresql/data/pgdata"
 

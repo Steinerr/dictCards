@@ -16,7 +16,7 @@ func (p *Page) save() error {
 }
 
 func getWikiPageFullPath(pageTitle string) string {
-	return "wiki_pages/" + pageTitle + ".txt"
+	return "pages/" + pageTitle + ".txt"
 }
 
 func loadPage(title string) (*Page, error) {
@@ -38,10 +38,6 @@ func wikiPageView(w http.ResponseWriter, r *http.Request) {
 	t, _ := template.ParseFiles("templates/page.html")
 	t.Execute(w, p)
 }
-
-//func wikiPageCreate(w http.ResponseWriter, r http.Request){
-//
-//}
 
 func main(){
 	http.HandleFunc("/", wikiPageView)

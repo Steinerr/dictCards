@@ -5,6 +5,8 @@ services:
     build: .
     ports:
       - 10200:8080
+    depends_on:
+      - db
   db:
     image: postgres
     restart: always
@@ -17,9 +19,9 @@ services:
       - "6000:5432"
     volumes:
       - "./pgdata/:/var/lib/postgresql/data/pgdata"
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 10100:8080
+#
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - 10100:8080

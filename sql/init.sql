@@ -1,10 +1,7 @@
-CREATE TABLE page (
+CREATE TABLE Card (
   id      SERIAL PRIMARY KEY,
-  title   varchar(255) UNIQUE NOT NULL,
-  body    text
+  phrase_from varchar (255) NOT NULL,
+  phrase_to   varchar (255) NOT NULL,
+  lng_from    varchar (255) NOT NULL,
+  lng_to      varchar (255) NOT NULL
 );
-
-INSERT INTO page (title, body) VALUES
-  ('test', 'TEST PAGE'),
-  ('111', 'NUMBERS')
-;

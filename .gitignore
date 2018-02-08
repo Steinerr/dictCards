@@ -80,3 +80,9 @@ node_modules
 # local data
 pgdata/
 bin/
+src/
+pkg/
+
+# project binary
+wiki
+wiki_unix
